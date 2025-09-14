@@ -1,0 +1,960 @@
+#----------------------- General -----------------------#
+
+#Time localization
+time:
+  seconds: сек
+  minutes: мин.
+  minute: минута
+  hours: час.
+  hour: час
+  days: дн.
+  day: день
+  never: никогда
+  indefinitely: на неопределенный срок
+  less_than_a_minute: меньше минуты
+
+#Quantity localization
+quantity:
+  free: бесплатно
+  infinite: бесконечно
+  unlimited: неограниченно
+
+#Villager status (Used for PAPI placeholders)
+status:
+  available: '&#25ea77Доступен'
+  bought: '&cКуплен'
+  no_owner: '&#c9d2dbНет владельца'
+
+#Villager name settings
+villager:
+  name_admin: '&cАдмин-магазин'
+  name_available: '&#25ea77Доступный магазин!'
+  name_taken: '&#c9d2dbМагазин &#00c6ff%player%'
+
+
+#----------------------- Messages -----------------------#
+
+messages:
+  invalid_command_usage: '&cНеправильное использование команды! Используйте &e/vm help'
+  reloaded: '&#c9d2dbПлагин перезагружен.'
+  cancelled: '&cДействие было отменено!'
+  not_number: '&cВы должны ввести число!'
+  use_dot: '&cИспользуйте точку вместо запятой для десятичных чисел!'
+  not_valid_range: '&cКоличество должно быть от 1 до 64!'
+  amount_successful: '&#25ea77Количество успешно установлено.'
+  price_successful: '&#25ea77Цена успешно установлена.'
+  negative_price: '&cЦена не может быть отрицательной!'
+  add_successful: '&#25ea77Предмет успешно добавлен.'
+  type_price: '&#c9d2dbПожалуйста, введите &#00c6ffцену &#c9d2dbпредмета в чате...'
+  type_amount: '&#c9d2dbПожалуйста, введите &#00c6ffколичество, &#c9d2dbкоторое хотите
+    продать/купить в чате...'
+  #Placeholder: %cancel% (see cancel option above)
+  type_cancel: '&#c9d2dbИли введите &#00c6ff%cancel% &#c9d2dbдля отмены'
+  sold_shop: '&#c9d2dbМагазин продан! Теперь он снова доступен для покупки.'
+  not_enough_money: '&cУ вас недостаточно денег для покупки!'
+  not_enough_stock: '&cНа складе недостаточно предметов в данный момент!'
+  remove_villager: '&cКликните ПКМ по &#00c6ffVillagerShop &c, который хотите удалить...'
+  no_villager_shop: '&cЭто не VillagerShop!'
+  villager_removed: '&cVillagerShop удален!'
+  blacklisted: '&cЭтот предмет в черном списке!'
+  owner_not_enough_money: '&cУ владельца магазина недостаточно денег!'
+  not_enough_in_inventory: '&cУ вас недостаточно предметов в инвентаре!'
+  #Placeholders: %player%, %amount%, %item%, %price%
+  bought_item_as_owner: '&#00c6ff%player%&#c9d2db продал вам &#00c6ff%amount%x %item%&#c9d2db
+    за &#25ea77%price%&#c9d2db.'
+  #Placeholders: %player%, %amount%, %material%, %price%
+  sold_item_as_owner: '&#00c6ff%player%&#c9d2db купил у вас &#00c6ff%amount%x %item%&#c9d2db
+    за &#25ea77%price%&#c9d2db.'
+  change_name: '&#00c6ffПожалуйста, введите название магазина в чате...'
+  change_name_set: '&#25ea77Название успешно установлено: &r%name%&#25ea77.'
+  must_be_menulore: '&cПожалуйста, переключитесь обратно в &e&nменю описания&c, чтобы
+    продавать/покупать предметы!'
+  cannot_buy_from_yourself: '&cВы не можете покупать предметы у себя!'
+  cannot_sell_to_yourself: '&cВы не можете продавать предметы самому себе!'
+  tax: '&#25ea77%tax% &#c9d2dbбыли взяты в качестве налога.'
+  expired: '&#c9d2dbВаш магазин истёк! Все предметы на хранении можно забрать с помощью
+    &#00c6ff/vm expiredstorage&#c9d2db.'
+  move_villager: '&#c9d2dbКликните ПКМ по &#00c6ffVillagerShop &#c9d2db, которого хотите
+    переместить.'
+  move_villager_to: '&#c9d2dbClick on the block you want to move the &#00c6ffVillager
+    Shop&#c9d2db to.'
+  max_rent_time: '&cНельзя увеличить время дальше. Достигнуто максимальное время аренды!'
+  search_result: '&#c9d2dbНайдено &#00c6ff%amount% &#c9d2dbмагазинов VillagerShops поблизости.'
+  search_shop_info: '&#c9d2db>> %name% &#c9d2dbна локации: &c%location%'
+  get_stats: '&#c9d2dbКликните правой кнопкой по &#00c6ffVillagerShop &#c9d2db, чтобы
+    получить статистику.'
+  not_owner: '&cВы не владелец этого магазина Villager Shop!'
+  type_limit_player: '&#00c6ffВведите максимальное количество, которое хотите купить,
+    в чат (&c0 &#00c6ff— без ограничений)...'
+  type_limit_admin: '&#c9d2dbВведите &#00c6ffлимит &#c9d2dbпокупки/продажи для этого
+    товара в чат'
+  reached_sell_limit: '&cВы не можете продать больше этого товара!'
+  reached_buy_limit: '&cВы не можете купить больше этого товара!'
+  reached_command_limit: '&cВы достигли лимита покупок для этой команды!'
+  money_left: '&#25ea77У вас осталось %amount%.'
+  money_currently: '&#25ea77На данный момент у вас %amount%.'
+  type_command: '&#00c6ffВведите команду без ''/'' (%player% как плейсхолдер)...'
+  finish_process: '&cСначала завершите процесс добавления товара в магазин! (Введите
+    ''cancel'' для отмены)'
+  collected_money: '&#00c6ffСобрано &#25ea77%amount%.'
+  not_playershop: '&cЭто не магазин игрока!'
+  add_trusted: '&#c9d2dbКликните по &#00c6ffVillager Shop &#c9d2db, которым владеете,
+    чтобы &#25ea77добавить &#c9d2dbв доверенные'
+  remove_trusted: '&#c9d2dbClick on &#00c6ffVillager Shop &#c9d2dbyou own to &cremove
+    &#c9d2dbtrusted'
+  trusted_added: '&#25ea77Игрок добавлен.'
+  trusted_removed: '&cИгрок удалён!'
+  region_no_access: '&cУ вас нет доступа к этому региону!'
+  no_permission_adminshop: '&cУ вас нет прав для использования этого Админ-магазина!'
+  no_permission_playershop: '&cУ вас нет прав для покупки этого магазина игрока!'
+  no_permission_change_name: '&cУ вас нет прав для изменения имени!'
+  no_permission_command: '&cУ вас нет прав для использования этой команды!'
+  no_permission_buy_shop: '&cУ вас нет прав для покупки магазинов!'
+  no_permission_use_item: '&cУ вас нет прав для использования этого предмета!'
+  no_permission_citizens: '&cУ вас нет прав для превращения магазина в NPC!'
+  no_permission_trade_item: '&cУ вас нет прав для обмена предметами!'
+  max_shops: '&cУ вас уже есть &e%current%&c/&e%max%&c доступных магазинов!'
+  get_id: '&#c9d2dbЩелкните правой кнопкой мыши по &#00c6ffмагазину-деревенскому жителю
+    &#c9d2db, чтобы получить его ID!'
+  #Placeholders: %id%
+  id: '&#c9d2dbUUID сущности: &#00c6ff%id%'
+  type_skin: '&#00c6ffПожалуйста, введите имя скина в чат...'
+  skin_set: '&#25ea77Скин успешно установлен.'
+  no_expired_storage: '&cУ вас нет истёкшего хранилища!'
+  type_limit_cooldown: '&#c9d2dbПожалуйста, введите лимит времени отката в чат (2h,
+    1d, never и т.д.)'
+  limit_cooldown_set: '&#25ea77Лимит времени отката установлен на &e%time%'
+  limits_cleared: '&cЛимиты очищены!'
+  name_blacklisted: '&cВы не можете использовать это название магазина!'
+  max_item_price: '&cСлишком высокая цена на товар! Попробуйте снова с более низкой
+    ценой.'
+  shopfront_cooldown: '&cПожалуйста, подождите перед следующей покупкой/продажей!'
+  max_name_length: '&cЭто название слишком длинное! Максимальная длина — %limit% символов.'
+  clone_shop: '&#c9d2dbКликните правой кнопкой по &#00c6ffМагазину Деревенского Жителя
+    &#c9d2db, который хотите клонировать.'
+  shop_cloned: '&#25ea77Магазин Деревенского Жителя успешно клонирован. Переместите
+    его с помощью &e/vm move&#25ea77.'
+  set_size: '&#c9d2dbКликните правой кнопкой по &#00c6ffМагазину Деревенского Жителя
+    &#c9d2db, размер которого хотите изменить.'
+  size_set: '&#25ea77Размер установлен на &e%size%&#25ea77.'
+  #Placeholders: %amount%, %item%, %price%, %shop%
+  bought_item_as_customer: '&#c9d2dbВы купили &#00c6ff%amount%x %item%&#c9d2db за &#25ea77%price%&#c9d2db
+    в &r%shop%.'
+  #Placeholders: %amount%, %item%, %price%, %shop%
+  sold_item_as_customer: '&#c9d2dbВы продали &#00c6ff%amount%x %item%&#c9d2db за &#25ea77%price%&#c9d2db
+    в &r%shop%.'
+  type_discount: '&#00c6ffВведите скидку (0-100) в чате...'
+  type_time: '&#00c6ffВведите время (2h, 1d и т. д.) в чате...'
+  not_valid_time: '&cНекорректное время! Время должно начинаться с числа и заканчиваться
+    на h, d или m.'
+  #Placeholders: %shop_name%, %discount%, %item%
+  discount_announcement: '&e%shop_name% &#25ea77теперь предлагает скидку &e%discount%%
+    &#25ea77на &e%item%&#25ea77!'
+  toggle_require_permission: '&#c9d2dbЩелкните правой кнопкой мыши по &#00c6ffТорговцу
+    &#c9d2db, для которого хотите изменить требование разрешения.'
+  require_permission_enabled: '&#25ea77Требование разрешения включено. Разрешение: &e%permission%'
+  require_permission_disabled: '&cТребование разрешения отключено.'
+
+stats_message:
+  - '&#00c6ffVillagerShop stats:'
+  - '&#c9d2db>> Items sold: &#25ea77%items_sold%'
+  - '&#c9d2db>> Items bought: &#25ea77%items_bought%'
+  - '&#c9d2db>> Money earned: &#25ea77%money_earned%'
+  - '&#c9d2db>> Money spent: &#25ea77%money_spent%'
+
+
+#--------------------- Menu items settings ---------------------#
+
+items:
+  back:
+    name: '&c&lНазад'
+    material: ARROW
+  filler:
+    name: ''
+    material: GRAY_STAINED_GLASS_PANE
+  next:
+    name: '&eВперед'
+    material: FEATHER
+    lore:
+      - '&#c9d2dbСледущая страница'
+  previous:
+    name: '&eНазад'
+    material: FEATHER
+    lore:
+      - '&#c9d2dbПредыдущая страница'
+
+#----------------------- Menu settings -----------------------#
+
+menus:
+  #-------------------- Buy Shop --------------------#
+  buy_shop:
+    title: '&8Купить магазин'
+    size: 27
+    filler_slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 26
+    items:
+      shop_size:
+        material: CHEST
+        slot: 12
+        #Placeholders: %amount%
+        name: '&#25ea77%amount%&#c9d2db слотов магазина'
+        lore:
+          - ''
+      storage_size:
+        material: WRITABLE_BOOK
+        slot: 14
+        #Placeholders: %amount%
+        name: '&#25ea77%amount%&#c9d2db слотов хранилища'
+        lore:
+          - ''
+      buy_shop:
+        material: EMERALD
+        slot: 13
+        name: '&#25ea77Купить этот магазин!'
+        lore:
+          - '&#c9d2dbНажмите, чтобы купить этот магазин за &#25ea77%price%&#c9d2db!'
+          - ''
+          - '&#c9d2dbМагазин будет'
+          - '&#c9d2dbпринадлежать вам на &#00c6ff%time%&#c9d2db!'
+
+  #-------------------- Edit Shop --------------------#
+  edit_shop:
+    title: '&8Изменить торговца'
+    size: 54
+    filler_slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 35
+      - 36
+      - 44
+      - 45
+      - 46
+      - 47
+      - 48
+      - 49
+      - 50
+      - 51
+      - 52
+      - 53
+    items:
+      #Edit items for sale item
+      edit_shopfront:
+        material: WRITABLE_BOOK
+        slot: 21
+        slot_admin: 21
+        name: '&#00c6ffРедактировать витрину'
+        lore:
+          - '&#c9d2dbНажмите, чтобы редактировать товары'
+          - '&#c9d2dbна продажу в вашем магазине'
+      #Preview shop item
+      preview_shop:
+        material: BOOK
+        slot: 23
+        slot_admin: 23
+        name: '&eПросмотр магазина'
+        lore:
+          - '&#c9d2dbНажмите, чтобы посмотреть вашу витрину'
+      #Edit storage item
+      edit_storage:
+        material: CHEST
+        slot: 22
+        name: '&cРедактировать хранилище'
+        lore:
+          - '&#c9d2dbНажмите, чтобы редактировать хранилище магазина'
+      #Edit villager item
+      edit_villager:
+        material: VILLAGER_SPAWN_EGG
+        slot: 30
+        slot_admin: 30
+        name: '&eРедактировать жителя'
+        lore:
+          - '&#c9d2dbНажмите, чтобы изменить профессию'
+          - '&#c9d2dbвашего жителя'
+      #Change villager name item
+      change_name:
+        material: NAME_TAG
+        slot: 32
+        slot_admin: 32
+        name: '&eИзменить имя жителя'
+        lore:
+          - '&#c9d2dbНажмите, чтобы изменить имя вашего жителя'
+      #Sell shop item
+      sell_shop:
+        material: FEATHER
+        slot: 31
+        name: '&cПродать/отказаться от магазина'
+        lore:
+          - '&#c9d2dbНажмите, чтобы отказаться от этого'
+          - '&#c9d2dbмагазина жителя!'
+      #Collect money (this needs to be enabled in general settings)
+      collect_money:
+        material: GOLD_INGOT
+        slot: 41
+        name: '&#25ea77Собрать деньги'
+        #Placeholders: %worth%
+        lore:
+          - '&#c9d2dbНажмите, чтобы собрать &#25ea77%worth%'
+      #Add more time item
+      increase_time:
+        material: EMERALD
+        slot: 13
+        name: '&#25ea77Увеличить время аренды'
+        #Placeholders: %expire%, %time%, %price%
+        lore:
+          - '&#c9d2dbВаш магазин истечет через: &e%expire%'
+          - ''
+          - '&#c9d2dbНажмите, чтобы увеличить'
+          - '&#c9d2dbвремя аренды на &#00c6ff%time%&#c9d2db за &#25ea77%price%&#c9d2db!'
+      #Enable trade notifications item
+      enable_trade_notifications:
+        material: RED_TERRACOTTA
+        slot: 40
+        name: '&eУведомления о сделках&#c9d2db: &cОтключены'
+        lore:
+          - '&#c9d2dbНажмите, чтобы включить уведомления о сделках'
+      #Disable trade notifications item
+      disable_trade_notifications:
+        material: LIME_TERRACOTTA
+        slot: 40
+        name: '&eУведомления о сделках&#c9d2db: &#25ea77Включены'
+        lore:
+          - '&#c9d2dbНажмите, чтобы отключить уведомления о сделках'
+
+  #-------------------- Shopfront --------------------#
+  shopfront:
+    title: '&#c9d2db%shop%'
+    #Placeholders: %item_name%, %mode%
+    item_name: '&f%item_name% %mode%'
+    detail_suffix: '&8(Подробнее)'
+    #Cooldown between selling/buying items (milliseconds)
+    cooldown: 500
+    items:
+      toggle_details:
+        name: '&eПереключить детали'
+        material: BOOK
+        lore:
+          - '&#c9d2db>> Левый клик, чтобы переключить'
+          - '&#c9d2dbмежду &eописанием предмета'
+          - '&#c9d2dbи &eописанием в меню&#c9d2db!'
+          - ''
+          - '&#c9d2db>> Правый клик &#c9d2dbдля возврата'
+    modes:
+      buy: '&8[&#25ea77КУПИТЬ&8]'
+      sell: '&8[&#25ea77ПРОДАТЬ&8]'
+      buy_and_sell: '&8[&#25ea77КУПИТЬ&#c9d2db/&#25ea77ПРОДАТЬ&8]'
+      command: '&8[&eКОМАНДА&8]'
+      trade: '&8[&eОБМЕН&8]'
+    discount_lore:
+      - ''
+      - '&#c9d2dbСкидка&f: &e%discount%%'
+      - '&#c9d2dbСкидка закончится через&f: &e%time%'
+    player_shop:
+      #Placeholders: %amount%, %price%, %stock%, %mode%
+      trade_lore:
+        - '&#c9d2dbРежим&f: %mode%'
+        - ''
+        - '&#c9d2dbКоличество&f: &e%amount%'
+        - '&#c9d2dbЦена&f: &#25ea77%price%'
+        - '&#c9d2dbВы можете обменять ещё &#00c6ff%available% &#c9d2dbраз'
+        - ''
+        - '&#c9d2db>> Нажмите, чтобы обменять'
+      #Placeholders: %amount%, %price%, %stock%, %mode%
+      buy_lore:
+        - '&#c9d2dbРежим&f: %mode%'
+        - ''
+        - '&#c9d2dbКоличество&f: &e%amount%'
+        - '&#c9d2dbЦена&f: &#25ea77%price%'
+        - '&#c9d2dbЦена за единицу&f: &#25ea77%price_per_unit%'
+        - '&#c9d2dbСейчас в наличии &#00c6ff%stock%'
+        - ''
+        - '&#c9d2db>> Нажмите, чтобы купить'
+      #Placeholders: %amount%, %price%, %available%, %mode%
+      sell_lore:
+        - '&#c9d2dbРежим&f: %mode%'
+        - ''
+        - '&#c9d2dbКоличество&f: &e%amount%'
+        - '&#c9d2dbЦена&f: &#25ea77%price%'
+        - '&#c9d2dbВы можете продать ещё &#00c6ff%available% &#c9d2dbраз'
+        - ''
+        - '&#c9d2db>> Нажмите, чтобы продать'
+      #Placeholders: %amount%, %price%, %available%, %mode%
+      buy_and_sell_lore:
+        - '&#c9d2dbРежим&f: %mode%'
+        - ''
+        - '&#c9d2dbКоличество&f: &e%amount%'
+        - '&#c9d2dbЦена покупки&f: &#25ea77%buy_price%'
+        - '&#c9d2dbЦена продажи&f: &#25ea77%sell_price%'
+        - '&#c9d2dbСейчас в наличии &#00c6ff%stock% &#c9d2dbшт.'
+        - '&#c9d2dbВы можете продать еще &#00c6ff%available% &#c9d2dbшт.'
+        - ''
+        - '&#c9d2db>> Левый клик — купить'
+        - '&#c9d2db>> Правый клик — продать'
+    admin_shop:
+      buy_and_sell_lore:
+        - '&#c9d2dbРежим&f: %mode%'
+        - ''
+        - '&#c9d2dbКоличество&f: &e%amount%'
+        - '&#c9d2dbЦена покупки&f: &#25ea77%buy_price%'
+        - '&#c9d2dbЦена продажи&f: &#25ea77%sell_price%'
+        - '%limit_lore%'
+        - ''
+        - '&#c9d2db>> Левый клик — купить'
+        - '&#c9d2db>> Правый клик — продать'
+      trade_lore:
+        - '&#c9d2dbРежим&f: %mode%'
+        - ''
+        - '&#c9d2dbКоличество&f: &e%amount%'
+        - '&#c9d2dbЦена&f: &#25ea77%price%'
+        - '%limit_lore%'
+        - ''
+        - '&#c9d2db>> Кликните, чтобы обменять'
+      sell_lore:
+        - '&#c9d2dbРежим&f: %mode%'
+        - ''
+        - '&#c9d2dbКоличество&f: &e%amount%'
+        - '&#c9d2dbЦена&f: &#25ea77%price%'
+        - '%limit_lore%'
+        - ''
+        - '&#c9d2db>> Нажмите, чтобы продать'
+      buy_lore:
+        - '&#c9d2dbРежим&f: %mode%'
+        - ''
+        - '&#c9d2dbКоличество&f: &e%amount%'
+        - '&#c9d2dbЦена&f: &#25ea77%price%'
+        - '%limit_lore%'
+        - ''
+        - '&#c9d2db>> Нажмите, чтобы купить'
+      command_lore:
+        - '&#c9d2dbРежим&f: %mode%'
+        - ''
+        - '&#c9d2dbКоличество&f: &e%amount%'
+        - '&#c9d2dbЦена&f: &#25ea77%price%'
+        - '%limit_lore%'
+        - ''
+        - '&#c9d2db>> Нажмите, чтобы купить команду'
+      buy_limit_lore:
+        - ''
+        - '&#c9d2dbКуплено: (&e%bought%&#c9d2db/&e%limit%&#c9d2db)'
+        - '&#c9d2dbСброс через: &e%reset%'
+      sell_limit_lore:
+        - ''
+        - '&#c9d2dbПродано: (&e%bought%&#c9d2db/&e%limit%&#c9d2db)'
+        - '&#c9d2dbСброс через: &e%reset%'
+      buy_and_sell_limit_lore:
+        - ''
+        - '&#c9d2dbКуплено или продано: (&e%bought%&#c9d2db/&e%limit%&#c9d2db)'
+        - '&#c9d2dbСброс через: &e%reset%'
+
+  #------------------ Edit Shopfront ------------------#
+  edit_shopfront:
+    title: '&8Добавление товаров на продажу'
+    #Placeholders: %item_name%, %mode%
+    item_name: '&f%item_name% %mode%'
+    modes:
+      buy: '&8[&#25ea77КУПИТЬ&8]'
+      sell: '&8[&#25ea77ПРОДАТЬ&8]'
+      buy_and_sell: '&8[&#25ea77ПРОДАТЬ&#c9d2db/&#25ea77КУПИТЬ&8]'
+      command: '&8[&eКОМАНДА&8]'
+      trade: '&8[&eОБМЕН&8]'
+    player_shop:
+      trade_lore:
+        - '&#c9d2dbРежим&f: %mode%'
+        - ''
+        - '&#c9d2dbКоличество&f: &e%amount%'
+        - '&#c9d2dbЦена&f: &#25ea77%price%'
+        - '&#c9d2dbВы можете обменять еще &#00c6ff%available%'
+        - ''
+        - '&#c9d2db>> Нажмите для редактирования'
+      #Placeholders: %amount%, %price%, %stock%
+      sell_lore:
+        - '&#c9d2dbРежим&f: %mode%'
+        - ''
+        - '&#c9d2dbКоличество&f: &e%amount%'
+        - '&#c9d2dbЦена&f: &#25ea77%price%'
+        - '&#c9d2dbСейчас в наличии: &#00c6ff%stock%'
+        - ''
+        - '&#c9d2db>> Нажмите для редактирования'
+      #Placeholders: %amount%, %price%, %available%
+      buy_lore:
+        - '&#c9d2dbРежим&f: %mode%'
+        - ''
+        - '&#c9d2dbКоличество&f: &e%amount%'
+        - '&#c9d2dbЦена&f: &#25ea77%price%'
+        - '&#c9d2dbВы можете купить еще &c%available% &#c9d2dbшт!'
+        - ''
+        - '&#c9d2db>> Нажмите, чтобы редактировать'
+      buy_and_sell_lore:
+        - '&#c9d2dbРежим&f: %mode%'
+        - ''
+        - '&#c9d2dbКоличество&f: &e%amount%'
+        - '&#c9d2dbЦена покупки&f: &#25ea77%buy_price%'
+        - '&#c9d2dbЦена продажи&f: &#25ea77%sell_price%'
+        - '&#c9d2dbВы можете купить еще &c%available% &#c9d2dbшт!'
+        - '&#c9d2dbСейчас в наличии: &#00c6ff%stock% &#c9d2dbшт!'
+        - ''
+        - '&#c9d2db>> Нажмите, чтобы редактировать'
+    admin_shop:
+      standard_lore:
+        - '&#c9d2dbМод&f: %mode%'
+        - ''
+        - '&#c9d2dbКоличество&f: &e%amount%'
+        - '&#c9d2dbЦена&f: &#25ea77%price%'
+        - '&#c9d2dbЛимит игрока&f: &#25ea77%limit%'
+        - ''
+        - '&#c9d2db>> Клик для изменения'
+
+  #--------------------- Storage ---------------------#
+  storage:
+    title: '&8Хранилище магазина'
+
+  #------------------ Edit Villager ------------------#
+  edit_villager:
+    title: '&8Изменить жителя'
+    size: 36
+    #This requires citizens to be on the server
+    citizens_item:
+      material: PLAYER_HEAD
+      slot: 31
+      name: '&eУстановить вместо этого скин'
+      lore:
+        - '&#c9d2dbНажмите, чтобы установить скин игрока'
+    back_slot: 35
+    filler_slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 27
+      - 28
+      - 29
+      - 30
+      - 31
+      - 32
+      - 33
+      - 34
+    items:
+      armorer:
+        material: IRON_CHESTPLATE
+        slot: 9
+        name: '&#c9d2dbБронник'
+      butcher:
+        material: PORKCHOP
+        slot: 10
+        name: '&cМясник'
+      cartographer:
+        material: MAP
+        slot: 11
+        name: '&#00c6ffКартограф'
+      cleric:
+        material: POTION
+        slot: 12
+        name: '&dСвященник'
+      farmer:
+        material: WHEAT
+        slot: 13
+        name: '&eФермер'
+      fisherman:
+        material: COD
+        slot: 14
+        name: '&#00c6ffРыбак'
+      fletcher:
+        material: FLETCHING_TABLE
+        slot: 15
+        name: '&eЛучник'
+      leatherworker:
+        material: LEATHER
+        slot: 16
+        name: '&cКожевник'
+      librarian:
+        material: BOOK
+        slot: 17
+        name: '&6Библиотекарь'
+      mason:
+        material: BRICK
+        slot: 18
+        name: '&cКаменщик'
+      nitwit:
+        material: PAPER
+        slot: 19
+        name: '&fДурачок'
+      shepherd:
+        material: WHITE_WOOL
+        slot: 20
+        name: '&fПастух'
+      toolsmith:
+        material: IRON_AXE
+        slot: 21
+        name: '&#c9d2dbКузнец инструментов'
+      weaponsmith:
+        material: IRON_SWORD
+        slot: 22
+        name: '&#c9d2dbОружейник'
+      none:
+        material: VILLAGER_SPAWN_EGG
+        slot: 23
+        name: '&cНет'
+      #Legacy versions
+      blacksmith:
+        material: ANVIL
+        slot: 9
+        name: '&#c9d2dbКузнец'
+      priest:
+        material: POTION
+        slot: 11
+        name: '&dСвященник'
+      normal:
+        material: VILLAGER_SPAWN_EGG
+        slot: 12
+        name: '&cНет'
+
+  #-------------------- Sell Shop --------------------#
+  sell_shop:
+    title: '&8Вы серьезно?'
+    size: 27
+    filler_slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 26
+    items:
+      no_cancel:
+        material: RED_TERRACOTTA
+        slot: 14
+        name: '&cНет, спасибо'
+      #If the Shop is reusable (created by command)
+      yes_sell:
+        material: LIME_TERRACOTTA
+        slot: 12
+        name: '&#25ea77Да, продать магазин'
+        #Placeholders: %amount%
+        lore:
+          - '&#c9d2dbВы получите &#25ea7750%'
+          - '&#c9d2db(&#25ea77%amount%&#c9d2db) денег потрачено'
+          - '&#c9d2dbкогда вы покидаете/продаете этот магазин'
+          - ''
+      #If the Shop isn't reusable (created using a spawn egg)
+      yes_remove:
+        material: LIME_TERRACOTTA
+        slot: 12
+        name: '&#25ea77Да, удалить магазин'
+        lore:
+          - '&#c9d2dbЭто &cудалит &#c9d2dbмагазин и даст вам'
+          - '&#c9d2dbновое яйцо спауна магазина!'
+
+  #-------------------- Edit Item --------------------#
+  edit_item:
+    title: '&8Изменить элемент'
+    size: 54
+    item_slot: 4
+    filler_slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 35
+      - 36
+      - 44
+      - 45
+      - 46
+      - 47
+      - 48
+      - 49
+      - 50
+      - 51
+      - 52
+      - 53
+    back_slot: 53
+    limit_cycle:
+      player: '&eИгрок&#c9d2db | Сервер'
+      server: '&#c9d2dbИгрок |&e Сервер'
+    mode_cycle:
+      player_shop:
+        item_trade: '&eПродажа &#c9d2db(Обмен на предмет)'
+        sell: '&eПродажа &#c9d2db| Покупка | Покупка и Продажа'
+        buy: '&#c9d2dbПродажа | &eПокупка &#c9d2db| Покупка и Продажа'
+        buy_and_sell: '&#c9d2dbПродажа | Покупка | &eПокупка и Продажа'
+      admin_shop:
+        item_trade: '&eПродажа &#c9d2db(Обмен на предмет)'
+        sell: '&eПродажа &#c9d2db| Покупка | Покупка и Продажа | Команда'
+        buy: '&#c9d2dbПродажа | &eПокупка &#c9d2db| Покупка и Продажа | Команда'
+        command: '&#c9d2dbПродажа | Покупка | Покупка и Продажа | &eКоманда'
+        buy_and_sell: '&#c9d2dbПродажа | Покупка | &eПокупка и Продажа &#c9d2db| Команда'
+
+    items:
+      mode:
+        material: OAK_SIGN
+        slot: 22
+        name: '&eРежим&#c9d2db: %mode%'
+        #%cycle% is replaced with cycle values above
+        lore:
+          - '&#c9d2dbНажмите, чтобы сменить режим:'
+          - '%cycle%'
+      amount:
+        material: CHEST
+        slot: 21
+        name: '&eКоличество&#c9d2db: &r%amount%'
+        lore:
+          - '&#c9d2dbНажмите, чтобы изменить'
+      price:
+        material: GOLD_INGOT
+        slot: 23
+        name: '&eЦена&#c9d2db: &r%price%'
+        lore:
+          - '&#c9d2dbНажмите, чтобы изменить цену'
+          - ''
+          - '&#c9d2db>> Нажмите с предметом, чтобы обменять'
+          - '&#c9d2dbна предмет вместо денег'
+        buy_and_sell_lore:
+          - '&#c9d2db>> Left click to set buy price'
+          - '&#c9d2db>> Right click to set sell price'
+          - ''
+          - '&#c9d2db>> Click with an item to trade'
+          - '&#c9d2dbfor item instead of money'
+      delete:
+        material: BARRIER
+        slot: 49
+        name: '&cУдалить'
+        lore:
+          - '&#c9d2dbНажмите, чтобы &cудалить &#c9d2dbпредмет'
+      command:
+        material: COMMAND_BLOCK
+        slot: 31
+        name: '&eКоманда'
+        lore:
+          - '&#c9d2dbТекущая команда(ы):'
+          - '&#c9d2db- &e%command%&#c9d2db'
+          - ''
+          - '&#c9d2db>> Левый клик, чтобы добавить'
+          - '&#c9d2db>> Правый клик, чтобы сбросить'
+      buy_limit:
+        material: FEATHER
+        slot: 31
+        name: '&eЛимит покупки&#c9d2db: %limit%'
+        lore:
+          - '&#c9d2db>> Нажмите, чтобы изменить'
+      player_limit:
+        material: PLAYER_HEAD
+        slot: 30
+        name: '&eЛимит игроков&#c9d2db: &f%limit%'
+        lore:
+          - '&#c9d2db>> Правый клик, чтобы сменить режим:'
+          - '%cycle%'
+          - ''
+          - '&#c9d2db>> Левый клик, чтобы изменить'
+      limit_cooldown:
+        material: CLOCK
+        slot: 32
+        name: '&eОжидание лимита&#c9d2db: &f%cooldown%'
+        lore:
+          - '&#c9d2dbСледующий сброс лимита: &e%next%'
+          - ''
+          - '&#c9d2db>> Левый клик, чтобы изменить время ожидания'
+          - '&#c9d2db>> Правый клик, чтобы &ccкинуть &#c9d2dблимиты'
+      discount:
+        material: EMERALD
+        slot: 13
+        name: '&eСкидка&#c9d2db: &f%discount%%'
+        lore:
+          - '&#c9d2dbОкончание: &e%discount_end%'
+          - ''
+          - '&#c9d2db>> Нажмите, чтобы изменить'
+      custom_amount_enabled:
+        material: LIME_TERRACOTTA
+        slot: 40
+        name: '&eКастомное количество&7: &aВключено'
+        lore:
+          - '&7Клик что бы выключить кастомное количество'
+      custom_amount_disabled:
+        material: RED_TERRACOTTA
+        slot: 40
+        name: '&eКастомное количество&7: &cВыключено'
+        lore:
+          - '&7Клик что бы включить кастомное количество'
+
+  confirm_action:
+    title: '&8Вы серьезно?'
+    size: 27
+    filler_slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 26
+    items:
+      accept:
+        material: GREEN_TERRACOTTA
+        slot: 12
+        name: '&#25ea77Да, подтвердить'
+      cancel:
+        material: RED_TERRACOTTA
+        slot: 14
+        name: '&cНет, отменить'
+  buy_item:
+    title_buy: '&8Купить элемент'
+    title_sell: '&8Продать элемент'
+    title_trade: '&8Trade item'
+    title_command: '&8Buy command'
+    filler_slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 12
+      - 14
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 26
+    back_slot: 26
+    size: 27
+    confirm_slot: 13
+    items:
+      increase_one:
+        material: LIME_TERRACOTTA
+        slot: 15
+        name: '&aУвеличить на 1'
+        lore:
+          - '&7Клик что бы увеличить на 1'
+      increase_stack:
+        material: LIME_TERRACOTTA
+        slot: 16
+        amount: 64
+        name: '&aУвеличить на стак'
+        lore:
+          - '&7Клик что бы увеличить на стак'
+      increase_max:
+        material: EMERALD_BLOCK
+        slot: 4
+        name: '&aУвеличить до максимума'
+        lore:
+          - '&7Клик что бы увеличить до максимума'
+      decrease_one:
+        material: RED_TERRACOTTA
+        slot: 10
+        name: '&cУменьшить на 1'
+        lore:
+          - '&7Клик что бы уменьшить на 1'
+      decrease_stack:
+        material: RED_TERRACOTTA
+        slot: 11
+        amount: 64
+        name: '&cУменьшить на стак'
+        lore:
+          - '&7Клик что бы уменьшить на стак'
+      toggle_sell:
+        material: BOOK
+        slot: 22
+        name: '&7Продать | &eКупить'
+        lore:
+          - '&7Клик что бы сменить на продажу'
+      toggle_buy:
+        material: BOOK
+        name: '&eПродать &7| Купить'
+        slot: 22
+        lore:
+          - '&7Клик что бы сменить на покупку'
+
+  #-------------------- Expired Storage --------------------#
+  expired_storage:
+    title: '&8Истек срок хранения'
+
+#----------------- Villager Shop Item settings -----------------#
+
+shop_item:
+  material: VILLAGER_SPAWN_EGG
+  name: '&#00c6ffСобственный магазин'
+  #Placeholders: %shop_size%, %storage_size%
+  lore:
+    - '&#c9d2dbИспользуйте это яйцо, чтобы'
+    - '&#c9d2dbсоздать ваш собственный магазин'
+    - ''
+    - '&#c9d2dbРазмер магазина&#00c6ff: %shop_size%'
+    - '&#c9d2dbРазмер хранилища&#00c6ff: %storage_size%'
