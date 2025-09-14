@@ -182,6 +182,19 @@ items:
     material: FEATHER
     lore:
       - '&#c9d2dbПредыдущая страница'
+  first_page:
+    name: '&b&lПервая страница'
+    material: FEATHER
+    lore:
+    - '&7Нажмите чтобы открыть'
+    - '&7Первую страницу'
+  last_page:
+    name: '&b&lПоследняя страница'
+    material: FEATHER
+    lore:
+    - '&7Нажмите чтобы открыть'
+    - '&7Последнюю страницу'
+
 
 #----------------------- Menu settings -----------------------#
 
@@ -958,3 +971,4 @@ shop_item:
     - ''
     - '&#c9d2dbРазмер магазина&#00c6ff: %shop_size%'
     - '&#c9d2dbРазмер хранилища&#00c6ff: %storage_size%'
+
