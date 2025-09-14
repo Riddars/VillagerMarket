@@ -51,35 +51,50 @@ public class StorageMenu extends Menu {
         if (isInfinite) {
             content.fillBottom(ConfigManager.getItem("items.filler").build());
 
-            if (page != 0) {
+            int lastPage = holder.getPages() - 1;
+
+            // Кнопка "НА ПЕРВУЮ СТРАНИЦУ"
+            if (page > 0) { // Показываем, если мы не на первой странице
+                content.setClickable(47, Clickable.of(ConfigManager.getItem("items.first_page").build(), event -> {
+                    Player player = (Player) event.getWhoClicked();
+                    player.playSound(player.getLocation(), ConfigManager.getSound("sounds.menu_click"), 0.5f, 1);
+                    holder.open(player, 0); // Открываем страницу 0
+                }));
+            }
+
+            // Кнопка "НАЗАД" (предыдущая страница)
+            if (page > 0) {
                 content.setClickable(48, Clickable.of(ConfigManager.getItem("items.previous").build(), event -> {
                     Player player = (Player) event.getWhoClicked();
                     player.playSound(player.getLocation(), ConfigManager.getSound("sounds.menu_click"), 0.5f, 1);
                     holder.open(player, page - 1);
                 }));
             }
-            if (page != holder.getPages() - 1) {
+
+            // Кнопка "ВПЕРЕД" (следующая страница)
+            if (page < lastPage) {
                 content.setClickable(50, Clickable.of(ConfigManager.getItem("items.next").build(), event -> {
                     Player player = (Player) event.getWhoClicked();
                     player.playSound(player.getLocation(), ConfigManager.getSound("sounds.menu_click"), 0.5f, 1);
                     holder.open(player, page + 1);
                 }));
             }
+
+            // Кнопка "НА ПОСЛЕДНЮЮ СТРАНИЦУ"
+            if (page < lastPage) { // Показываем, если мы не на последней странице
+                content.setClickable(51, Clickable.of(ConfigManager.getItem("items.last_page").build(), event -> {
+                    Player player = (Player) event.getWhoClicked();
+                    player.playSound(player.getLocation(), ConfigManager.getSound("sounds.menu_click"), 0.5f, 1);
+                    holder.open(player, lastPage); // Открываем последнюю страницу
+                }));
+            }
+
         }
         content.setClickable(inventorySize - 1, Clickable.of(ConfigManager.getItem("items.back").build(), event -> {
             Player player = (Player) event.getWhoClicked();
             this.holder.back(player);
             player.playSound(player.getLocation(), ConfigManager.getSound("sounds.back"), 0.5f, 1);
         }));
-    }
-
-    @Override
-    protected void onClose(InventoryCloseEvent event) {
-        if (holder.getShop() == null) {
-            return;
-        }
-        holder.getShop().getShopfrontHolder().update();
-        holder.onClick();
     }
 
     @Override
